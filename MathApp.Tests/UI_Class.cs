@@ -4,7 +4,6 @@ using NUnit.Framework;
 
 namespace MathApp.Tests
 {
-    [TestFixture]
     class UI_Class
     {
         [Test]
