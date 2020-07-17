@@ -40,11 +40,13 @@ namespace MathApp.Tests
         {
             Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(-3500000, 7589));
         }
+        
         [Test] //Under int.MinValue
         public void Multiplication_of_int_MIN_VALUE_and_2__Throws_OverflowException()
         {
             Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(int.MinValue, 2));
         }
+        
         [Test] //Above int.MaxValue
         public void Multiplication_of_3_and_INT_MAX_VALUE_Throws_OverflowException()
         {
