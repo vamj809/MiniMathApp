@@ -9,8 +9,10 @@ namespace MathApp
     {
         public static int Multiply(int a, int b)
         {
-            checked { 
-                return a*b;
+            try {
+                return checked(a * b);
+            } catch {
+                throw new OverflowException("Multiplicacion excede los limites de tamaño del entero");
             }
         }
     }
