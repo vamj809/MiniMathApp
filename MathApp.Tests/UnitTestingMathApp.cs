@@ -34,5 +34,11 @@ namespace MathApp.Tests
         {
             Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(2000000000, 23));
         }
+
+        [Test]
+        public void If_Multiplication_of_negative_3500000_and_7589_Is_Under_MinValue_Throws_System_Overflow_Exception()
+        {
+            Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(-3500000, 7589));
+        }
     }
 }
