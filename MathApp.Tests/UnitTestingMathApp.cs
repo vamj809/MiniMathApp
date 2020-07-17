@@ -1,19 +1,14 @@
 using NUnit.Framework;
+using MathApp;
 
 namespace MathApp.Tests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-            //ok
-        }
-
         [Test]
-        public void Test1()
+        public void Multiplication_of_2_and_2_returns_4()
         {
-            Assert.Pass();
+            Assert.AreEqual(4,MiniCalc.Multiply(2,2));
         }
     }
 }

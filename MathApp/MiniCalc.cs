@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MathApp
 {
-    class MiniCalc
+    public class MiniCalc
     {
         
     }
