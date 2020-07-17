@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using MathApp;
 
 namespace MathApp.Tests
 {

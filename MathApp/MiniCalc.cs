@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq.Expressions;
-using System.Text;
 
 namespace MathApp
 {
@@ -19,10 +16,11 @@ namespace MathApp
         public static string TestMyMain(string args)
         {
             Process MyMathApp = new Process();
-            MyMathApp.StartInfo.FileName = "MathApp.exe";
+            MyMathApp.StartInfo.FileName = @"..\..\..\..\MathApp\bin\Debug\netcoreapp3.1\MathApp.exe";
             MyMathApp.StartInfo.Arguments = args;
             MyMathApp.StartInfo.UseShellExecute = false;
             MyMathApp.StartInfo.RedirectStandardOutput = true;
+
             MyMathApp.Start();
             MyMathApp.WaitForExit();
 

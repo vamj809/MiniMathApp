@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Threading;
-using System.Windows.Markup;
 
 namespace MathApp
 {
@@ -9,15 +6,20 @@ namespace MathApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("-------------------------------------------");
-            Console.WriteLine("--- Hello World! I'm a Mini-Calculator! ---");
-            Console.WriteLine("-------------------------------------------\n");
-
-            if (args.Length == 2) {
+            if(args.Length == 1) {
+                string[] input = args[0].Split(' ');
+                Console.WriteLine($"{input[0]}x{input[1]}=" +
+                $"{ MiniCalc.Multiply(int.Parse(input[0]), int.Parse(input[1]))}");
+            }
+            else if (args.Length == 2) {
                 Console.WriteLine($"{args[0]}x{args[1]}=" +
                 $"{ MiniCalc.Multiply(int.Parse(args[0]), int.Parse(args[1]))}");
             }
-            else { 
+            else {
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine("--- Hello World! I'm a Mini-Calculator! ---");
+                Console.WriteLine("-------------------------------------------\n");
+
                 Console.WriteLine("Write two integers:");
                 Console.Write("- A:");
                 if(!int.TryParse(Console.ReadLine(), out int a)) {
