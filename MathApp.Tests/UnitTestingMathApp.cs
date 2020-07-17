@@ -29,21 +29,26 @@ namespace MathApp.Tests
             Assert.AreEqual(0, MiniCalc.Multiply(0, int.MaxValue));
         }
 
-        [Test]
-        public void If_Multiplication_of_2_billion_and_23_Exceeds_MaxValue_Throws_System_Overflow_Exception()
+        [Test] //Above int.MaxValue
+        public void Multiplication_of_2_billion_and_23_Throws_System_Overflow_Exception()
         {
             Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(2000000000, 23));
         }
 
-        [Test]
-        public void If_Multiplication_of_negative_3500000_and_7589_Is_Under_MinValue_Throws_OverflowException()
+        [Test] //Under int.MinValue
+        public void Multiplication_of_negative_3500000_and_7589_Throws_OverflowException()
         {
             Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(-3500000, 7589));
         }
-        [Test]
-        public void If_Multiplication_of_int_MIN_VALUE_and_2_Is_Under_MinValue_Throws_OverflowException()
+        [Test] //Under int.MinValue
+        public void Multiplication_of_int_MIN_VALUE_and_2__Throws_OverflowException()
         {
             Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(int.MinValue, 2));
+        }
+        [Test] //Above int.MaxValue
+        public void Multiplication_of_3_and_INT_MAX_VALUE_Throws_OverflowException()
+        {
+            Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(3, int.MaxValue));
         }
     }
 }
