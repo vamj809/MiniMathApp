@@ -7,6 +7,7 @@ namespace MathApp.Tests
         [SetUp]
         public void Setup()
         {
+            //ok
         }
 
         [Test]
