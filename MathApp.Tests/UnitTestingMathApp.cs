@@ -22,5 +22,17 @@ namespace MathApp.Tests
         {
             Assert.AreEqual(50, MiniCalc.Multiply(-1, -50));
         }
+
+        [Test]
+        public void Multiplication_of_0_and_MAX_INT_returns_0()
+        {
+            Assert.AreEqual(0, MiniCalc.Multiply(0, int.MaxValue));
+        }
+
+        [Test]
+        public void If_Multiplication_of_2_billion_and_23_Exceeds_MaxValue_Throws_System_Overflow_Exception()
+        {
+            Assert.Throws<System.OverflowException>(() => MiniCalc.Multiply(2000000000, 23));
+        }
     }
 }

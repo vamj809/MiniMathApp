@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace MathApp
@@ -8,7 +9,9 @@ namespace MathApp
     {
         public static int Multiply(int a, int b)
         {
-            return a*b;
+            checked { 
+                return a*b;
+            }
         }
     }
 }
