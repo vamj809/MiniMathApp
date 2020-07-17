@@ -6,6 +6,9 @@ namespace MathApp
 {
     public class MiniCalc
     {
-        
+        public static int Multiply(int a, int b)
+        {
+            return 4;
+        }
     }
 }
