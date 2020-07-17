@@ -10,5 +10,11 @@ namespace MathApp.Tests
         {
             Assert.AreEqual(4,MiniCalc.Multiply(2,2));
         }
+
+        [Test]
+        public void Multiplication_of_negative_4_and_755_returns_negative_3020()
+        {
+            Assert.AreEqual(-3020, MiniCalc.Multiply(-4, 755));
+        }
     }
 }

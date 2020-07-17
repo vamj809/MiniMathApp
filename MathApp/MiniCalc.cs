@@ -8,9 +8,7 @@ namespace MathApp
     {
         public static int Multiply(int a, int b)
         {
-            if(a == 2 && b == 2)
-                return 4;
-            return 0;
+            return a*b;
         }
     }
 }
