@@ -7,6 +7,7 @@ namespace MathApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("-------------------------------------------");
             Console.WriteLine("--- Hello World! I'm a Mini-Calculator! ---");
             Console.WriteLine("-------------------------------------------\n");
 
