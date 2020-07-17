@@ -6,6 +6,6 @@ namespace MathApp
 {
     class MiniCalc
     {
-        //public static int Multiply();
+        
     }
 }
